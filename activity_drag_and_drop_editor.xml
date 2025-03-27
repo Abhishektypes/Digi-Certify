@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Template Image (Ensures Proper Size Without Stretching) -->
+    <ImageView
+        android:id="@+id/templateImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:contentDescription="Template Preview"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Drag & Drop Fields (Now Draggable & Resizable) -->
+    <TextView
+        android:id="@+id/nameField"
+        android:layout_width="124dp"
+        android:layout_height="13dp"
+        android:layout_below="@id/templateImageView"
+        android:background="#2FFF00"
+        android:gravity="center"
+        android:text="Name"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/courseField"
+        android:layout_width="109dp"
+        android:layout_height="13dp"
+        android:layout_below="@id/nameField"
+        android:background="#FF0000"
+        android:gravity="center"
+        android:text="Course"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/qrField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/courseField"
+        android:background="#FFBD00"
+        android:gravity="center"
+        android:text="QR Code"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/idField"
+        android:layout_width="wrap_content"
+        android:layout_height="13dp"
+        android:layout_below="@id/qrField"
+        android:layout_marginTop="0dp"
+        android:background="#000CFF"
+        android:gravity="center"
+        android:text="Certificate ID"
+        android:textColor="#80CBC4" />
+
+    <!-- Save Button (Moved Below Template To Avoid Overlap) -->
+    <Button
+        android:id="@+id/savePositionsButton"
+        android:text="Save Positions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/idField"
+        android:layout_marginTop="20dp"/>
+</RelativeLayout>
